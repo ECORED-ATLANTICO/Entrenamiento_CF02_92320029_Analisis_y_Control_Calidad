@@ -1,17 +1,23 @@
 export default {
   global: {
-    Name: 'Nombre del recurso educativo',
-    Description: 'Descripción del RED',
-    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.svg'),
+    Name:
+      'Evaluación de la calidad e inocuidad de los alimentos mediante APPCC.',
+    Description:
+      'Este componente formativo está orientado a adquirir y fortalecer en el aprendiz las competencias técnicas en gestión de calidad e inocuidad alimentaria, mediante la aplicación de Buenas Prácticas de Manufactura (BPM) y el sistema APPCC en contextos productivos reales, promoviendo la prevención de riesgos y la protección de la salud pública.',
+    imagenBannerPrincipal: require('@/assets/curso/portada/banner-principal.png'),
     fondoBannerPrincipal: require('@/assets/curso/portada/fondo-banner-principal.png'),
     imagenesDecorativasBanner: [
       {
         clases: ['banner-principal-decorativo-1', 'd-none', 'd-lg-block'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.svg'),
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-1.png'),
       },
       {
         clases: ['banner-principal-decorativo-2'],
-        imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.svg'),
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-2.png'),
+      },
+      {
+        clases: ['banner-principal-decorativo-3'],
+        imagen: require('@/assets/curso/portada/banner-principal-decorativo-3.png'),
       },
     ],
   },
@@ -31,13 +37,23 @@ export default {
       {
         nombreRuta: 'tema1',
         numero: '1',
-        titulo: 'Tema 1',
+        titulo: 'Fundamentos de calidad e inocuidad alimentaria',
         desarrolloContenidos: true,
         subMenu: [
           {
             numero: '1.1',
-            titulo: 'Subtema 1',
+            titulo: 'Concepto de calidad en alimentos',
             hash: 't_1_1',
+          },
+          {
+            numero: '1.2',
+            titulo: 'Inocuidad alimentaria y riesgos asociados',
+            hash: 't_1_2',
+          },
+          {
+            numero: '1.3',
+            titulo: 'Relación entre calidad, inocuidad y salud pública',
+            hash: 't_1_3',
           },
         ],
       },
@@ -45,8 +61,25 @@ export default {
       {
         nombreRuta: 'tema2',
         numero: '2',
-        titulo: 'Tema 2',
+        titulo: 'Marco normativo y técnico del APPCC',
         desarrolloContenidos: true,
+        subMenu: [
+          {
+            numero: '2.1',
+            titulo: 'Evolución del sistema APPCC',
+            hash: 't_2_1',
+          },
+          {
+            numero: '2.2',
+            titulo: 'Codex Alimentarius y estándares internacionales',
+            hash: 't_2_2',
+          },
+          {
+            numero: '2.3',
+            titulo: 'Normatividad colombiana vigente',
+            hash: 't_2_3',
+          },
+        ],
       },
       {
         nombreRuta: 'tema3',
@@ -113,11 +146,106 @@ export default {
       termino: '',
       significado: '',
     },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
+    {
+      termino: '',
+      significado: '',
+    },
   ],
   referencias: [
     {
+      referencia:
+        'Codex Alimentarius Commission. (2023). General principles of food hygiene CXC 1-1969 (Rev. 2023).',
+      link: 'https://www.fao.org/fao-who-codexalimentarius',
+    },
+    {
       referencia: '',
       link: '',
+    },
+    {
+      referencia:
+        'Food and Agriculture Organization of the United Nations (FAO). (2003). Sistema de calidad e inocuidad de los alimentos: Manual de capacitación sobre higiene de los alimentos y el sistema de análisis de peligros y de puntos críticos de control (APPCC). FAO.',
+      link: 'https://www.fao.org/4/W8088S/W8088S00.htm',
+    },
+    {
+      referencia:
+        'Food and Agriculture Organization of the United Nations (FAO) & World Health Organization (WHO). (2022). Food safety risk analysis: A guide for national food safety authorities. FAO.',
+      link: 'https://www.fao.org/home/en',
+    },
+    {
+      referencia:
+        'Fundación para la Seguridad y Calidad Alimentaria. (2018). Guía de autocontrol en establecimientos alimentarios. Universidad de Salamanca.',
+      link: 'https://seguridadycalidadalimentaria.fundacionusal.es',
+    },
+    {
+      referencia:
+        'Instituto Nacional de Vigilancia de Medicamentos y Alimentos (INVIMA). (2023). Lineamientos técnicos de buenas prácticas de manufactura y sistemas de autocontrol sanitario.',
+      link: 'https://www.invima.gov.co',
+    },
+    {
+      referencia:
+        'International Organization for Standardization. (2023). ISO 22000:2023 Sistemas de gestión de la inocuidad de los alimentos - Requisitos para cualquier organización de la cadena alimentaria. ISO.',
+      link: '',
+    },
+    {
+      referencia:
+        'Organización Panamericana de la Salud (OPS). (2022). Inocuidad de los alimentos y salud pública.',
+      link: 'https://www.paho.org',
     },
   ],
   creditos: [
