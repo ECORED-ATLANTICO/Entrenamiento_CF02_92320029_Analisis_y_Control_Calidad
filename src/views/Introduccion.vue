@@ -13,54 +13,41 @@
 
 
     //- Bloque 1: Imagen y texto
-    .row.justify-content-center.align-items-center.mb-5
-      .col-lg-3.col-6.mb-4.mb-lg-0
-        figure
-          img(src='@/assets/curso/Intro/Intro.png', alt='Imagen introductoria')
-      .col-lg-9
-        p.mb-0 Los alimentos procesados hacen parte fundamental de la dieta actual y su calidad depende, en gran medida, de los procesos y sustancias empleadas durante su elaboración. Entre estos elementos se encuentran los aditivos alimentarios, compuestos que cumplen funciones tecnológicas específicas y que inciden directamente en la estabilidad, apariencia, sabor e inocuidad de los productos.
-
-
-    // BLOQUE Banner con imagen
     .row.justify-content-center.mb-5
-
-      .col-lg-12
-        .tarjeta.bloque-info.p-4.p-lg-5
-
-          .row.align-items-center
-
-            .col-lg-9
-              p.mb-0
-                | Comprender el origen, la clasificación, la función y la regulación de los aditivos permite interpretar de manera adecuada los análisis físicoquímicos aplicados a los alimentos y tomar decisiones informadas dentro de los procesos de control de calidad. Este componente desarrolla los conceptos esenciales y su aplicación práctica, promoviendo el uso responsable y normado de los aditivos en coherencia con las exigencias del sector alimentario.
-
-            .col-lg-3.text-center
-              img.icono-info(src='@/assets/curso/Intro/micro3.png')
-
-
-    // PODCAST
-    .row.justify-content-center
-
-      .col-lg-8
-        .tarjeta.podcast.p-4.p-lg-5
-
-          .row.align-items-center
-
-            .col-lg-5
+      .col-lg-12.col-12
+       .contenedor-banner-limitado
+        .banner-principal-fondo.p-3.p-md-5
+          .row.justify-content-center.align-items-center
+            .col-lg-11.col-12.mb-0
               figure
-                img(src='@/assets/curso/Intro/podcast3.svg')
-
-            .col-lg-7
-
-              h3.text-white.mb-4 Pódcast
-
-              .tarjeta.tarjeta--blanca.p-4.reproductor
-
-                p.titulo-audio Etiquetas bajo la lupa
-                  .indicador--click(v-if="mostrarIndicadorTarjetaAudio")
-                TarjetaAudio.color-acento-botones.mb-3(
+              img(src='@/assets/curso/Intro/operario.png', alt='Operario')
         
-        :audio="require('@/assets/curso/audios/podcast-intro.mp3',)"
-      )
+
+            .col-lg-8.col-12.tarjeta.tarjeta--blanca.p-4.shadow.banner-texto-overlap
+             p.mb-0 El sistema de Análisis de Peligros y Puntos Críticos de Control (APPCC) es una metodología preventiva fundamentada en el análisis del riesgo, orientada a identificar, evaluar y controlar los peligros biológicos, químicos y físicos que pueden afectar la inocuidad de los alimentos durante las diferentes etapas del proceso productivo. Su implementación permite garantizar el cumplimiento de los requisitos sanitarios establecidos por la normativa vigente y reducir la probabilidad de enfermedades transmitidas por alimentos, fortaleciendo la protección de la salud pública.
+        
+      
+
+    // BLOQUE Banner naranja + icono + con imagen a la derecha
+    .row.justify-content-center.align-items-center.mb-5
+
+      .col-lg-9
+        .tarjeta.bloque-banner-intro.p-4.p-lg-5
+
+          .row.justify-content-center
+
+            .col-lg-1.d-none.d-lg-block
+              img(src='@/assets/curso/Intro/ondas.svg', alt='Decoración')
+            .col-lg-10
+              p.mb-0
+                | En el desarrollo de este componente formativo, consolidan en el aprendiz competencias para aplicar los principios del sistema APPCC en contextos productivos reales, mediante la identificación de peligros significativos, la determinación de puntos críticos de control y el establecimiento de medidas preventivas y correctivas. Este enfoque promueve una gestión sistemática de la inocuidad, alineada con estándares internacionales y con las exigencias del sector alimentario nacional.
+
+      .col-lg-3
+        figure
+        img(src='@/assets/curso/Intro/intro4.svg', alt='Imagen descriptiva')
+
+
+    
 </template>
 
 <script>
@@ -103,13 +90,60 @@ export default {
   .icono-info
     width: 90px
 
-  .podcast
-    background-color: #4E8AE1
-    border-radius: 16px
-
   .reproductor
     border-radius: 12px
 
   .titulo-audio
     font-weight: 600
+
+  .bloque-banner-intro
+    background-image: url('../assets/curso/Intro/bannerintro1.svg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    border-radius: 12px
+    min-height: 180px
+  .banner-curso
+    border-radius: 12px
+    min-height: 200px
+    padding: 2rem
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    display: flex
+    align-items: center
+
+  .banner-intro-fondo
+    background-size: cover
+    background-position: center
+    border-radius: 20px
+    background-repeat: no-repeat
+
+  .contenedor-banner-limitado
+    overflow: visible // Permite que el cuadro de texto sobresalga hacia abajo
+    width: 100%
+    max-width: 100%
+
+  .banner-principal-fondo
+    background-image: url('../assets/curso/Intro/banner1.png')
+    background-size: cover // Cubre el área sin deformarse
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 20px
+    width: 100%
+    padding-bottom: 6rem !important
+
+  .banner-texto-overlap
+    background-color: #ffffff !important
+    margin-top: -5rem // Ajusta este valor para subir o bajar el cuadro blanco
+    z-index: 10
+    position: relative
+    border: 1px solid #f0f0f0
+
+  .tarjeta--floating
+    margin-top: -80px
+    background-color: #ffffff !important // Forzamos el blanco si la clase anterior interfiere
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important
+    z-index: 10
+    border: 1px solid #f0f0f0 // Opcional: un borde sutil como en el diseño original
 </style>
